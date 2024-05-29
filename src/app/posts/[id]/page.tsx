@@ -1,4 +1,4 @@
-export default  async function Page({params}) {
+export default  async function Page({params}: {params: any}) {
   const response = await fetch(`https://dummyjson.com/posts/${params.id}`);
   const post= await response.json();
   return (
